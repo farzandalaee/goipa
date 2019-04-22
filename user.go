@@ -36,7 +36,7 @@ type UserRecord struct {
 	Mobile           IpaString   `json:"mobile"`
 	Shell            IpaString   `json:"loginshell"`
 	SudoRules        IpaString   `json:"memberofindirect_sudorule"`
-	HbacRules        IpaString   `json:"memberofindirect_hbacrule"`
+	HbacRules        IpaString   `json:"memberof_hbacrule"`
 	LastPasswdChange IpaDateTime `json:"krblastpwdchange"`
 	PasswdExpire     IpaDateTime `json:"krbpasswordexpiration"`
 	PrincipalExpire  IpaDateTime `json:"krbprincipalexpiration"`
