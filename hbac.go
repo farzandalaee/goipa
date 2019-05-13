@@ -9,6 +9,7 @@ type HbacRecord struct {
 	Dn            string   `json:"dn"`
 	Description   []string `json:"description"`
 	Enable        []string `json:"ipaenabledflag"`
+	AllHosts      []string `json:"hostcategory"`
 	Hosts         []string `json:"memberhost_host"`
 	HostGroups    []string `json:"memberhost_hostgroup"`
 	Services      []string `json:"memberservice_hbacsvc"`

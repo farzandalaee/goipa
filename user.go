@@ -16,33 +16,34 @@ import (
 
 // UserRecord encapsulates user data returned from ipa user commands
 type UserRecord struct {
-	Dn               string      `json:"dn"`
-	First            IpaString   `json:"givenname"`
-	Last             IpaString   `json:"sn"`
-	DisplayName      IpaString   `json:"displayname"`
-	Principal        IpaString   `json:"krbprincipalname"`
-	Uid              IpaString   `json:"uid"`
-	UidNumber        IpaString   `json:"uidnumber"`
-	GidNumber        IpaString   `json:"gidnumber"`
-	Groups           []string    `json:"memberof_group"`
-	SSHPubKeys       []string    `json:"ipasshpubkey"`
-	SSHPubKeyFps     []string    `json:"sshpubkeyfp"`
-	AuthTypes        []string    `json:"ipauserauthtype"`
-	HasKeytab        bool        `json:"has_keytab"`
-	HasPassword      bool        `json:"has_password"`
-	NSAccountLock    bool        `json:"nsaccountlock"`
-	HomeDir          IpaString   `json:"homedirectory"`
-	Email            IpaString   `json:"mail"`
-	Mobile           IpaString   `json:"mobile"`
-	Shell            IpaString   `json:"loginshell"`
-	SudoRules        IpaString   `json:"memberofindirect_sudorule"`
-	HbacRules        []string    `json:"memberof_hbacrule"`
-	LastPasswdChange IpaDateTime `json:"krblastpwdchange"`
-	PasswdExpire     IpaDateTime `json:"krbpasswordexpiration"`
-	PrincipalExpire  IpaDateTime `json:"krbprincipalexpiration"`
-	LastLoginSuccess IpaDateTime `json:"krblastsuccessfulauth"`
-	LastLoginFail    IpaDateTime `json:"krblastfailedauth"`
-	Randompassword   string      `json:"randompassword"`
+	Dn                string      `json:"dn"`
+	First             IpaString   `json:"givenname"`
+	Last              IpaString   `json:"sn"`
+	DisplayName       IpaString   `json:"displayname"`
+	Principal         IpaString   `json:"krbprincipalname"`
+	Uid               IpaString   `json:"uid"`
+	UidNumber         IpaString   `json:"uidnumber"`
+	GidNumber         IpaString   `json:"gidnumber"`
+	Groups            []string    `json:"memberof_group"`
+	SSHPubKeys        []string    `json:"ipasshpubkey"`
+	SSHPubKeyFps      []string    `json:"sshpubkeyfp"`
+	AuthTypes         []string    `json:"ipauserauthtype"`
+	HasKeytab         bool        `json:"has_keytab"`
+	HasPassword       bool        `json:"has_password"`
+	NSAccountLock     bool        `json:"nsaccountlock"`
+	HomeDir           IpaString   `json:"homedirectory"`
+	Email             IpaString   `json:"mail"`
+	Mobile            IpaString   `json:"mobile"`
+	Shell             IpaString   `json:"loginshell"`
+	SudoRules         IpaString   `json:"memberofindirect_sudorule"`
+	HbacRules         []string    `json:"memberof_hbacrule"`
+	HbacRulesIndirect []string    `json:"memberofindirect_hbacrule"`
+	LastPasswdChange  IpaDateTime `json:"krblastpwdchange"`
+	PasswdExpire      IpaDateTime `json:"krbpasswordexpiration"`
+	PrincipalExpire   IpaDateTime `json:"krbprincipalexpiration"`
+	LastLoginSuccess  IpaDateTime `json:"krblastsuccessfulauth"`
+	LastLoginFail     IpaDateTime `json:"krblastfailedauth"`
+	Randompassword    string      `json:"randompassword"`
 }
 
 // Returns true if OTP is the only authentication type enabled
